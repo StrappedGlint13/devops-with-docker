@@ -2,15 +2,15 @@
 
 ## Excercise 1.1
 
-<img src="https://github.com/StrappedGlint13/devops-with-docker/blob/master/images/1.1.png" width="200">
+<img src="https://github.com/StrappedGlint13/devops-with-docker/blob/main/images/1.1.png" width="200">
 
 ## Excercise 1.2
 
-<img src="https://github.com/StrappedGlint13/devops-with-docker/blob/master/images/1.2.png" width="200">
+<img src="https://github.com/StrappedGlint13/devops-with-docker/blob/main/images/1.2.png" width="200">
 
 ## Excercise 1.3
 
-<img src="https://github.com/StrappedGlint13/devops-with-docker/blob/master/images/1.3.png" width="200">
+<img src="hhttps://github.com/StrappedGlint13/devops-with-docker/blob/main/images/1.3.png" width="200">
 
 ## Excercise 1.4
 
@@ -47,5 +47,39 @@ You found the correct password. Secret message is:
 "This is the secret message"
 ```
 
+## Excercise 1.7
+
+Dockerfile:
+
+```
+FROM devopsdockeruh/simple-web-service:ubuntu
+CMD server
+```
+
+Commands:
+
+```
+$ docker build . -t web-server
+Sending build context to Docker daemon  3.584kB
+Step 1/2 : FROM devopsdockeruh/simple-web-service:ubuntu
+ ---> 4e3362e907d5
+Step 2/2 : CMD server
+ ---> Running in 50a8fb101bcb
+Removing intermediate container 50a8fb101bcb
+ ---> c6391c736812
+Successfully built c6391c736812
+Successfully tagged web-server:latest
+
+$ docker run web-server
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+
+```
 
 

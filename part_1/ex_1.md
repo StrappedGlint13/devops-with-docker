@@ -18,3 +18,10 @@
 $ docker run -it ubuntu sh -c 'apt-get update; apt-get install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 ```
 
+## Excercise 1.5
+
+Ubuntu image size is 83MB and Alpine version is only 15.7MB. The functionality is the same. 
+
+
+
+

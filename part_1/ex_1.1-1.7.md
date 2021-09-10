@@ -10,7 +10,7 @@
 
 ## Excercise 1.3
 
-<img src="hhttps://github.com/StrappedGlint13/devops-with-docker/blob/main/images/1.3.png" width="200">
+<img src="https://github.com/StrappedGlint13/devops-with-docker/blob/main/images/1.3.png" width="200">
 
 ## Excercise 1.4
 

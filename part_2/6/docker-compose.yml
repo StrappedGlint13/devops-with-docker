@@ -1,0 +1,28 @@
+version: '3.5'  
+
+services: 
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        POSTGRES_PASSWORD: example
+        POSTGRES_USER: example
+    frontend: 
+      image: frontend
+      build: ./../4/example-frontend
+      ports:
+        - 5000:5000
+    backend:
+      image: backend
+      build: ./../4/example-backend
+      environment: 
+        - REDIS_HOST=redis
+        - POSTGRES_HOST=db
+        - POSTGRES_USER=example
+        - POSTGRES_PASSWORD=example
+      ports:
+        - 8080:8080
+      depends_on: 
+      - db
+    redis:
+      image: redis

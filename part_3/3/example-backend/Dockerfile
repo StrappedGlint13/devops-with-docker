@@ -1,14 +1,11 @@
-FROM golang:alpine AS multistage
+FROM golang:alpine 
 
-WORKDIR /go/src/api
+WORKDIR /usr/src/app
 
 COPY . .
 
 RUN go build
 
-FROM alpine:3.8
-WORKDIR /usr/src/app
-COPY --from=multistage /go/src/api .
 EXPOSE 8080
 ENV REQUEST_ORIGIN=http://localhost:5000
 

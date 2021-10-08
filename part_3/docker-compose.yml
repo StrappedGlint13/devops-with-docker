@@ -33,7 +33,7 @@ services:
   reverse-proxy:
     image: nginx:latest
     volumes: 
-      - ./../../part_2/8/nginx.conf:/etc/nginx/nginx.conf
+      - ./../part_2/8/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
     depends_on:

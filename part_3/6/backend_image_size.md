@@ -1,0 +1,1 @@
+<img src=https://github.com/StrappedGlint13/devops-with-docker/blob/main/images/3.6_backend.png width=500>
